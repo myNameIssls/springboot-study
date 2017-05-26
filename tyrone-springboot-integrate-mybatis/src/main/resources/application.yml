@@ -1,9 +1,9 @@
 spring:
   datasource:
-    username: m_shoufubang
-    password: sfb_123#@!
+    username: root
+    password: root
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://121.42.207.91:3306/shoufubang?useUnicode=true&amp;characterEncoding=gbk&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;allowMultiQueries=true
+    url: jdbc:mysql://localhost.91:3306/test?useUnicode=true&amp;characterEncoding=gbk&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;allowMultiQueries=true
     
 mybatis:
   mapper-locations: /mapper/*.xml
