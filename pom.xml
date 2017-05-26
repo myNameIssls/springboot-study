@@ -48,5 +48,6 @@
 
 	<modules>
 		<module>tyrone-springboot-quickstart-withoutparent</module>
+		<module>tyrone-springboot-integrate-mybatis</module>
 	</modules>
 </project>
