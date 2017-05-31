@@ -3,7 +3,12 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost.91:3306/test?useUnicode=true&amp;characterEncoding=gbk&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=gbk&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;allowMultiQueries=true
     
+logging:
+  level:
+#    org.springframework.web: debug
+    cn.tyrone.springboot.integrate.mybatis.dao: debug
+  file: D:/springboot/log.log
 mybatis:
   mapper-locations: /mapper/*.xml
