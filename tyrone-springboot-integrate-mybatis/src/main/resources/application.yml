@@ -5,6 +5,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=gbk&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;allowMultiQueries=true
     
+    
 logging:
   level:
 #    org.springframework.web: debug
@@ -12,3 +13,6 @@ logging:
   file: D:/springboot/log.log
 mybatis:
   mapper-locations: /mapper/*.xml
+  
+
+ 
