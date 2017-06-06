@@ -10,3 +10,5 @@ springboot学习
 这是关于springboot热部署的示例
 5. tyrone-springboot-integrate-view
 这是关于springboot整合视图层的demo,包括Freemarker, thymeleaf
+6. tyrone-springboot-integrate-thymeleaf3
+这是关于springboot整合模板引擎thymeleaf3的demo

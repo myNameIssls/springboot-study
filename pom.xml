@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cn.tyrone.springboot</groupId>
@@ -11,6 +12,8 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
+		<spring-boot-version>1.5.3.RELEASE</spring-boot-version>
+		<junit-version>4.12</junit-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -21,22 +24,15 @@
 				<!-- Import dependency management from Spring Boot -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.4.3.RELEASE</version>
+				<version>${spring-boot-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			
-			<dependency>
-			    <groupId>org.springframework.boot</groupId>
-			    <artifactId>spring-boot-starter-freemarker</artifactId>
-			    <version>1.5.3.RELEASE</version>
-			</dependency>
-			
-			
+
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>3.8.1</version>
+				<version>${junit-version}</version>
 				<scope>test</scope>
 			</dependency>
 		</dependencies>
@@ -44,12 +40,30 @@
 
 	<!-- Package as an executable jar -->
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+		<pluginManagement>
+			<plugins>
+				
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+<!-- 		<plugins> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.springframework.boot</groupId> -->
+<!-- 				<artifactId>spring-boot-maven-plugin</artifactId> -->
+<!-- 			</plugin> -->
+<!-- 		</plugins> -->
 	</build>
 
 
@@ -57,6 +71,7 @@
 		<module>tyrone-springboot-quickstart-withoutparent</module>
 		<module>tyrone-springboot-integrate-mybatis</module>
 		<module>tyrone-springboot-hotdeploy-devtools</module>
-    <module>tyrone-springboot-integrate-view</module>
-  </modules>
+		<module>tyrone-springboot-integrate-view</module>
+		<module>tyrone-springboot-integrate-thymeleaf3</module>
+	</modules>
 </project>
