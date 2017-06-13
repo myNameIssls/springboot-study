@@ -12,3 +12,7 @@ springboot学习
 这是关于springboot整合视图层的demo,包括Freemarker, thymeleaf
 6. tyrone-springboot-integrate-thymeleaf3
 这是关于springboot整合模板引擎thymeleaf3的demo
+7. tyrone-springboot-integrate-redis 
+这是springboot整合redis的demo
+8. tyrone-springboot-integrate-h2
+springboot整合h2的demo,目前测试有没有成功，有待改进

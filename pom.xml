@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cn.tyrone.springboot</groupId>
@@ -73,5 +72,7 @@
 		<module>tyrone-springboot-hotdeploy-devtools</module>
 		<module>tyrone-springboot-integrate-view</module>
 		<module>tyrone-springboot-integrate-thymeleaf3</module>
-	</modules>
+	    <module>tyrone-springboot-integrate-h2</module>
+	    <module>tyrone-springboot-integrate-redis</module>
+  </modules>
 </project>
