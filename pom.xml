@@ -74,5 +74,7 @@
 		<module>tyrone-springboot-integrate-thymeleaf3</module>
 	    <module>tyrone-springboot-integrate-h2</module>
 	    <module>tyrone-springboot-integrate-redis</module>
+	    <module>tyrone-springboot-integrate-activemq</module>
+	    <module>tyrone-springboot-redis-message</module>
   </modules>
 </project>
