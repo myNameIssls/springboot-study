@@ -16,3 +16,5 @@ springboot学习
 这是springboot整合redis的demo
 8. tyrone-springboot-integrate-h2
 springboot整合h2的demo,目前测试有没有成功，有待改进
+9. tyrone-springboot-redis-message
+这是springboot与redis发布订阅的demo
