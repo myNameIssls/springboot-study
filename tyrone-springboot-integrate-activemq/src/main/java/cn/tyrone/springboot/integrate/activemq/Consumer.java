@@ -8,6 +8,8 @@ public class Consumer {
 	
 	@JmsListener(destination = "sample.queue")
 	public void receiveMessge(String text){
-		System.out.println("发送的消息:\t" + text);
+		System.out.println("----接收消息开始 ----");
+		System.out.println("接收的消息内容:\t" + text);
+		System.out.println("----接收消息结束 ----");
 	}
 }
