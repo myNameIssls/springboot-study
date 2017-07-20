@@ -1,21 +1,24 @@
 package cn.tyrone.springboot.integrate.activemq;
 
-import org.springframework.boot.CommandLineRunner;
+import javax.jms.Queue;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.stereotype.Component;
 
-/**
- * 消息生产者
- * 
- * @author Administrator
- *
- */
-//@com
-public class Producer implements CommandLineRunner {
 
-	@Override
-	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
+@Component
+public class Producer {
 
+	@Autowired private JmsMessagingTemplate jmsMessagingTemplate;
+	@Autowired private Queue queue;
+	
+	/*
+	 * 发送消息
+	 */
+	public void send(String msg){
+		this.jmsMessagingTemplate.convertAndSend(this.queue, msg);
 	}
-
+	
+	
 }
