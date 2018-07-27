@@ -3,7 +3,7 @@
 ## springboot-study 工程概述
 
 ## springboot-study 模块介绍
-
+[springboot-email](https://github.com/myNameIssls/springboot-study/tree/master/springboot-email)
 
 
 

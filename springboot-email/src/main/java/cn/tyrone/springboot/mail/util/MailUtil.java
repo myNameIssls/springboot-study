@@ -92,6 +92,9 @@ public class MailUtil {
 	
 	/**
 	 * 内联资源（静态资源）邮件发送
+	 * 由于邮件服务商不同，可能有些邮件并不支持内联资源的展示
+	 * 在测试过程中，新浪邮件不支持，QQ邮件支持
+	 * 不支持不意味着邮件发送不成功，而且内联资源在邮箱内无法正确加载
 	 * @param mailBean
 	 */
 	public void sendMailInline(MailBean mailBean) {

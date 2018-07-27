@@ -227,6 +227,9 @@ public class MailUtil {
 	
 	/**
 	 * 内联资源（静态资源）邮件发送
+	 * 由于邮件服务商不同，可能有些邮件并不支持内联资源的展示
+	 * 在测试过程中，新浪邮件不支持，QQ邮件支持
+	 * 不支持不意味着邮件发送不成功，而且内联资源在邮箱内无法正确加载
 	 * @param mailBean
 	 */
 	public void sendMailInline(MailBean mailBean) {
@@ -333,13 +336,13 @@ public class MailBean {
 注意：根据约定大于配置，模板文件建议放在`resources`目录下。本例：`/resources/templates/emailTemplate.html`
 
 博客地址： <br>
-[SpringCloud 企业级应用实战](https://blog.csdn.net/mynameissls/article/details/81150061) <br>
-[基于Eureka Server实现服务注册高可用](https://blog.csdn.net/myNameIssls/article/details/81157345)
+[SpringBoot 企业级应用实战](https://blog.csdn.net/column/details/14078.html) <br>
+[SpringBoot集成Java Mail实现邮件发送功能](https://blog.csdn.net/myNameIssls/article/details/81255060)
 
 参考链接:  <br>
 [https://docs.spring.io/spring-boot/docs/2.0.3.RELEASE/reference/htmlsingle/#boot-features-email](https://docs.spring.io/spring-boot/docs/2.0.3.RELEASE/reference/htmlsingle/#boot-features-email) <br>
 [https://docs.spring.io/spring/docs/5.0.7.RELEASE/spring-framework-reference/integration.html#mail](https://docs.spring.io/spring/docs/5.0.7.RELEASE/spring-framework-reference/integration.html#mail) <br>
-[https://javaee.github.io/javamail/](https://javaee.github.io/javamail/)
+[https://javaee.github.io/javamail/](https://javaee.github.io/javamail/) <br >
 [https://www.cnblogs.com/ityouknow/p/6823356.html](https://www.cnblogs.com/ityouknow/p/6823356.html)
 
 
