@@ -2,8 +2,6 @@ package cn.tyrone.springboot.thymeleaf3;
 
 import java.util.Calendar;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 public class Message {
 	private Long id;
 

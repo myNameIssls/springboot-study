@@ -1,0 +1,18 @@
+#spring:
+#  mail:
+#    host: smtp.sina.cn
+#    port: 25
+#    username: shanglishuai@sina.cn
+#    password: 768061
+#    protocol: smtp
+#    default-encoding: UTF-8
+#dxbrcmxjktzqbbhj
+
+spring:
+  mail:
+    host: smtp.qq.com # QQ邮箱smtp主机
+    port: 587 #端口号465或587
+    username: test@qq.com
+    password: dxbrcmxjktzqbbhj  # 这里QQ邮箱开通POP3/SMTP提供的授权码，如果邮箱服务商没有授权码，可以使用密码代替
+    protocol: smtp
+    default-encoding: UTF-8

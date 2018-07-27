@@ -1,4 +1,17 @@
 # springboot-study
+
+## springboot-study 工程概述
+
+## springboot-study 模块介绍
+
+
+
+
+
+
+
+
+# springboot-study
 springboot学习
 1. springboot-study
 这是springboot学习的父项目，pom文件中采用import的方式导入的springboot依赖，从而解决了直接使用spring-boot-starter-parent作为父项目的问题，这种方式更加符合我们企业中的项目开发
