@@ -80,5 +80,6 @@
 		<module>tyrone-springboot-integrate-activemq</module>
 		<module>tyrone-springboot-redis-message</module>
 		<module>springboot-email</module>
+		<module>springboot-quartz</module>
 	</modules>
 </project>
