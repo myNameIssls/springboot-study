@@ -60,12 +60,6 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<!-- <plugins> -->
-		<!-- <plugin> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-maven-plugin</artifactId> -->
-		<!-- </plugin> -->
-		<!-- </plugins> -->
 	</build>
 
 
@@ -81,5 +75,6 @@
 		<module>tyrone-springboot-redis-message</module>
 		<module>springboot-email</module>
 		<module>springboot-quartz</module>
+		<module>springboot-example</module>
 	</modules>
 </project>
