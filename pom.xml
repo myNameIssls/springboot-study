@@ -76,5 +76,8 @@
 		<module>springboot-email</module>
 		<module>springboot-quartz</module>
 		<module>springboot-example</module>
+		<module>springboot-dubbo-api</module>
+		<module>springboot-dubbo-provider</module>
+		<module>springboot-dubbo-consumer</module>
 	</modules>
 </project>

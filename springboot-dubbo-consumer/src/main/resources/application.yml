@@ -1,0 +1,13 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: spring-boot-consumer
+  
+dubbo:
+  application:
+    id: spring-boot-consumer
+    name: spring-boot-consumer
+  registry:
+    protocol: zookeeper
+    address: localhost:2181

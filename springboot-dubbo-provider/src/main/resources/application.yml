@@ -1,0 +1,20 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: spingboot-dubbo-provider
+
+dubbo:
+  application:
+    id: spring-dubbo-provider
+    name: spring-dubbo-provider
+  registry: # 配置注册中心
+    protocol: zookeeper # 指定注册中心协议
+    address: localhost:2181 # 指定注册中心地址
+  protocol: # 配置协议
+    name: dubbo
+    port: 20880
+#  monitor:
+#    protocol: registry  # 监控中心协议，如果为protocol="registry"，表示从注册中心发现监控中心地址，否则直连监控中心。
+    
+    
