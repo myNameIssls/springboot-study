@@ -35,6 +35,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- Boot 单元测试包 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- 热部署 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

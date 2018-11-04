@@ -1,0 +1,5 @@
+server:
+  port: 7200
+spring:
+  profiles:
+    active: test

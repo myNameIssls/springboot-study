@@ -1,0 +1,6 @@
+# 通过spring.profiles.active来指定运行环境当前配置
+spring:
+  profiles:
+    active: prod
+  application:
+    name: springboot-example
