@@ -9,7 +9,7 @@ springboot-example主要是实现SpringBoot的一些知识点，这些知识点�
 这个知识点位于`cn.tyrone.springboot.example.properties`这个包下。<br >
 博文地址：[https://blog.csdn.net/myNameIssls/article/details/81545710](https://blog.csdn.net/myNameIssls/article/details/81545710)<br >
 
-
+- [SpringBoot多环境开发部署](https://blog.csdn.net/myNameIssls/article/details/83757045) <br >
 
 博客地址： <br>
 [SpringBoot 企业级应用实战](https://blog.csdn.net/column/details/14078.html) <br>
