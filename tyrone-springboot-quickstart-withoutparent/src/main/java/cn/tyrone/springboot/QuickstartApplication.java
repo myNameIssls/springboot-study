@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @EnableAutoConfiguration
 public class QuickstartApplication {
-	
-	@RequestMapping("/")
+
+    @RequestMapping("/")
     @ResponseBody
-    String home(){
+    String home() {
         return "Hello World!!!";
     }
-	
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(QuickstartApplication.class, args);
-	}
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(QuickstartApplication.class, args);
+    }
 
 }

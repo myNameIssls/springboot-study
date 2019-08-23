@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="cn.tyrone.springboot.integrate.mybatis.dao.UserMapper">
 
-	<select id="listxml" parameterType="java.util.Map" resultType="java.util.Map">
-		select * from sfb_capital_user_project
-	</select>
+    <select id="listxml" parameterType="java.util.Map" resultType="java.util.Map">
+        select * from sfb_capital_user_project
+    </select>
 
 </mapper>

@@ -14,32 +14,34 @@ import cn.tyrone.springboot.mail.util.MailUtil;
 
 @SpringBootApplication
 public class Application implements CommandLineRunner {
-	
-	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
-	
-	@Autowired MailUtil mailUtil;
-	// 注入模板引擎
-	@Autowired TemplateEngine templateEngine;
-	
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
-	
-	@Override
-	public void run(String... args) throws Exception {
-		log.info("------------- SpringBoot集成JavaMail实现邮件发送开始 -------------");
-		MailBean mailBean = MailBean.getMailBean();
-		/*
-		 * 简易邮件发送测试
-		 */
+    private static final Logger log = LoggerFactory.getLogger(Application.class);
+
+
+    @Autowired
+    MailUtil mailUtil;
+    // 注入模板引擎
+    @Autowired
+    TemplateEngine templateEngine;
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        log.info("------------- SpringBoot集成JavaMail实现邮件发送开始 -------------");
+        MailBean mailBean = MailBean.getMailBean();
+        /*
+         * 简易邮件发送测试
+         */
 //		mailBean.setSubject("SpringBoot集成JavaMail实现邮件发送");
 //		mailBean.setText("SpringBoot集成JavaMail实现简易邮件发送功能");
 //		mailUtil.sendMail(mailBean);
-		
-		/**
-		 * HTML邮件正文发送测试
-		 */
+
+        /**
+         * HTML邮件正文发送测试
+         */
 //		String html = 
 //				"<html>"
 //				+ "<body>"
@@ -49,10 +51,10 @@ public class Application implements CommandLineRunner {
 //		mailBean.setSubject("SpringBoot集成JavaMail实现邮件发送");
 //		mailBean.setText(html);
 //		mailUtil.sendMailHtml(mailBean);
-		
-		/**
-		 * 附件邮件发送测试
-		 */
+
+        /**
+         * 附件邮件发送测试
+         */
 //		String filePath="/Users/shanglishuai/Downloads/Jietu20180727-144621@2x.jpg";
 //		FileSystemResource file = new FileSystemResource(new File(filePath));
 //      String attachmentFilename = filePath.substring(filePath.lastIndexOf(File.separator));
@@ -61,11 +63,11 @@ public class Application implements CommandLineRunner {
 //		mailBean.setFile(file);
 //		mailBean.setAttachmentFilename(attachmentFilename);
 //		mailUtil.sendMailAttachment(mailBean);
-		
-		
-		/**
-		 * 内联资源邮件发送测试
-		 */
+
+
+        /**
+         * 内联资源邮件发送测试
+         */
 //		String filePath="/Users/shanglishuai/Downloads/Jietu20180727-144621@2x.jpg";
 //		String contentId = UUID.randomUUID().toString().replace("-", "");
 //		/*
@@ -79,14 +81,14 @@ public class Application implements CommandLineRunner {
 //		mailBean.setFile(file);
 //		mailBean.setContentId(contentId);
 //		mailUtil.sendMailInline(mailBean);
-		
-		Context context = new Context();
-		context.setVariable("user", "Tyrone");
-		String content = templateEngine.process("emailTemplate", context);
-		mailBean.setSubject("SpringBoot集成JavaMail实现邮件发送");
-		mailBean.setText(content);
-		mailUtil.sendMailTemplate(mailBean);
-		
-		log.info("------------- SpringBoot集成JavaMail实现邮件发送结束 -------------");
-	}
+
+        Context context = new Context();
+        context.setVariable("user", "Tyrone");
+        String content = templateEngine.process("emailTemplate", context);
+        mailBean.setSubject("SpringBoot集成JavaMail实现邮件发送");
+        mailBean.setText(content);
+        mailUtil.sendMailTemplate(mailBean);
+
+        log.info("------------- SpringBoot集成JavaMail实现邮件发送结束 -------------");
+    }
 }

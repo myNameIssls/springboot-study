@@ -12,24 +12,24 @@ import cn.tyrone.springboot.quartz.service.QuartzTaskService;
 
 /**
  * 该类是配置类，用于Quartz配置所需要
- * @author shanglishuai
  *
+ * @author shanglishuai
  */
-@Configuration 
+@Configuration
 public class QuartzConfig {
-	
-	/**
-	 * JobDetail 用于指定定时任务具体的类
-	 */
-	@Bean
-	public JobDetail quartzTaskServiceJobDetail() {
+
+    /**
+     * JobDetail 用于指定定时任务具体的类
+     */
+    @Bean
+    public JobDetail quartzTaskServiceJobDetail() {
         return JobBuilder.newJob(QuartzTaskService.class).withIdentity("quartzTaskService").storeDurably().build();
     }
-	
-	/**
-	 * Trigger 用于指定定时任务触发的机制
-	 */
-	@Bean
+
+    /**
+     * Trigger 用于指定定时任务触发的机制
+     */
+    @Bean
     public Trigger quartzTaskServiceTrigger() {
         CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("*/5 * * * * ?");
         return TriggerBuilder.newTrigger().forJob(quartzTaskServiceJobDetail())

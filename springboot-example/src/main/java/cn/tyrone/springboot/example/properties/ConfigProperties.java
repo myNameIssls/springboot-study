@@ -9,9 +9,9 @@ import lombok.Data;
 @Data
 @Component
 @ConfigurationProperties(prefix = "config.author")
-@PropertySource(value = "classpath:config.properties", encoding = "UTF-8") 
+@PropertySource(value = "classpath:config.properties", encoding = "UTF-8")
 public class ConfigProperties {
-	private String name;
-	private String age;
-	private String addr;
+    private String name;
+    private String age;
+    private String addr;
 }

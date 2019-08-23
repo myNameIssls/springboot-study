@@ -1,90 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>cn.tyrone.springboot</groupId>
-	<artifactId>springboot-study</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>cn.tyrone.springboot</groupId>
+    <artifactId>springboot-study</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<name>springboot-study</name>
-	<url>http://maven.apache.org</url>
+    <name>springboot-study</name>
+    <url>http://maven.apache.org</url>
 
-	<properties>
-		<!-- <spring-boot-version>1.5.3.RELEASE</spring-boot-version> -->
-		<spring-boot-version>2.0.3.RELEASE</spring-boot-version>
-		<junit-version>4.12</junit-version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+    <properties>
+        <!-- <spring-boot-version>1.5.3.RELEASE</spring-boot-version> -->
+        <spring-boot-version>2.1.7.RELEASE</spring-boot-version>
+        <junit-version>4.12</junit-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-	<dependencyManagement>
-		<dependencies>
+    <dependencyManagement>
+        <dependencies>
 
-			<dependency>
-				<!-- Import dependency management from Spring Boot -->
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot-version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>${junit-version}</version>
-				<scope>test</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit-version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-	<!-- Package as an executable jar -->
-	<build>
-		<pluginManagement>
-			<plugins>
+    <!-- Package as an executable jar -->
+    <build>
+        <pluginManagement>
+            <plugins>
 
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
-					</configuration>
-				</plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
 
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-					<executions>
-						<execution>
-							<goals>
-								<goal>repackage</goal>
-							</goals>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>repackage</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 
-	<modules>
-		<module>tyrone-springboot-quickstart-withoutparent</module>
-		<module>tyrone-springboot-integrate-mybatis</module>
-		<module>tyrone-springboot-hotdeploy-devtools</module>
-		<module>tyrone-springboot-integrate-view</module>
-		<module>tyrone-springboot-integrate-thymeleaf3</module>
-		<module>tyrone-springboot-integrate-h2</module>
-		<module>tyrone-springboot-integrate-redis</module>
-		<module>tyrone-springboot-integrate-activemq</module>
-		<module>tyrone-springboot-redis-message</module>
-		<module>springboot-email</module>
-		<module>springboot-quartz</module>
-		<module>springboot-example</module>
-		<module>springboot-dubbo-api</module>
-		<module>springboot-dubbo-provider</module>
-		<module>springboot-dubbo-consumer</module>
-	</modules>
+    <modules>
+        <module>tyrone-springboot-quickstart-withoutparent</module>
+        <module>tyrone-springboot-integrate-mybatis</module>
+        <module>tyrone-springboot-hotdeploy-devtools</module>
+        <module>tyrone-springboot-integrate-view</module>
+        <module>tyrone-springboot-integrate-thymeleaf3</module>
+        <module>tyrone-springboot-integrate-h2</module>
+        <module>tyrone-springboot-integrate-redis</module>
+        <module>tyrone-springboot-integrate-activemq</module>
+        <module>tyrone-springboot-redis-message</module>
+        <module>springboot-email</module>
+        <module>springboot-quartz</module>
+        <module>springboot-example</module>
+        <module>springboot-dubbo-api</module>
+        <module>springboot-dubbo-provider</module>
+        <module>springboot-dubbo-consumer</module>
+        <module>springboot-mongodb</module>
+        <module>springboot-rabbitmq</module>
+    </modules>
 </project>

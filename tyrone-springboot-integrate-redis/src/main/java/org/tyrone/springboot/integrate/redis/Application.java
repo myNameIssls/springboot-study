@@ -10,21 +10,21 @@ import org.springframework.data.redis.core.ValueOperations;
 @SpringBootApplication
 public class Application implements CommandLineRunner {
 
-	@Autowired
-	private StringRedisTemplate template;
+    @Autowired
+    private StringRedisTemplate template;
 
-	@Override
-	public void run(String... args) throws Exception {
-		ValueOperations<String, String> ops = this.template.opsForValue();
-		String key = "spring.boot.redis.test";
-		if (!this.template.hasKey(key)) {
-			ops.set(key, "foo");
-		}
-		System.out.println("Found key " + key + ", value=" + ops.get(key));
-	}
+    @Override
+    public void run(String... args) throws Exception {
+        ValueOperations<String, String> ops = this.template.opsForValue();
+        String key = "spring.boot.redis.test";
+        if (!this.template.hasKey(key)) {
+            ops.set(key, "foo");
+        }
+        System.out.println("Found key " + key + ", value=" + ops.get(key));
+    }
 
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
 
 }

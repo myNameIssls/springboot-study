@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @EnableAutoConfiguration
 public class DevToolsApplication {
-	
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(DevToolsApplication.class, args);
-	}
-	
-	@RequestMapping("/")
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(DevToolsApplication.class, args);
+    }
+
+    @RequestMapping("/")
     @ResponseBody
-    String home(){
+    String home() {
         return "Hello World!!!你真好啊！！！！是真的吗？";
     }
-	
-	
+
+
 }

@@ -11,32 +11,32 @@ import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 
 import cn.tyrone.springboot.dubbo.api.DemoService;
 
-@EnableDubbo	// @EnableDubbo <==> @EnableDubboConfig + @DubboComponentScan
+@EnableDubbo    // @EnableDubbo <==> @EnableDubboConfig + @DubboComponentScan
 @SpringBootApplication
 public class Application implements CommandLineRunner {
-	
-	private static final Logger log = LoggerFactory.getLogger(Application.class);
-	
-	/*
-	 * 通过 @Reference 注解，生成远程代理服务，用于获取服务端请求
-	 */
-	@Reference(interfaceClass = DemoService.class)
-	private DemoService demoService;
-	
-	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
-	}
 
-	
-	@Override
-	public void run(String... args) throws Exception {
-		
-		String name = "SpringBoot-Dubbo-Consummer-Example";
-		
-		String result = demoService.sayHello(name);
-		
-		log.info("SpringBoot整合Dubbo消费端示例结果：" + result);
-		
-	}
+    private static final Logger log = LoggerFactory.getLogger(Application.class);
+
+    /*
+     * 通过 @Reference 注解，生成远程代理服务，用于获取服务端请求
+     */
+    @Reference(interfaceClass = DemoService.class)
+    private DemoService demoService;
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(Application.class, args);
+    }
+
+
+    @Override
+    public void run(String... args) throws Exception {
+
+        String name = "SpringBoot-Dubbo-Consummer-Example";
+
+        String result = demoService.sayHello(name);
+
+        log.info("SpringBoot整合Dubbo消费端示例结果：" + result);
+
+    }
 
 }

@@ -21,12 +21,13 @@ public class ProfilesTst {
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Autowired private Environment env;
+    @Autowired
+    private Environment env;
     @Autowired
     HttpServletRequest request;
 
     @Test
-    public void test(){
+    public void test() {
         String spring_profiles_active = env.getProperty("spring.profiles.active");
         String server_port = env.getProperty("server.port");
         int serverPort = request.getServerPort();
