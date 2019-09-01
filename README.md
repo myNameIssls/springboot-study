@@ -9,8 +9,7 @@
 - [springboot-dubbo-provider](https://github.com/myNameIssls/springboot-study/tree/master/springboot-dubbo-provider) <br >
 - [springboot-dubbo-consumer](https://github.com/myNameIssls/springboot-study/tree/master/springboot-dubbo-consumer) <br >
 - [springboot-dubbo-api](https://github.com/myNameIssls/springboot-study/tree/master/springboot-dubbo-api) <br >
-
-
+- [springboot-rabbitmq](https://github.com/myNameIssls/springboot-study/tree/master/springboot-rabbitmq) <br >
 
 
 
