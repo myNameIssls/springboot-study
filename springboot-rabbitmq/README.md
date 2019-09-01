@@ -237,13 +237,7 @@ public class RabbitMQConsumer {
 
 博客地址： <br>
 [SpringBoot 企业级应用实战](https://blog.csdn.net/column/details/14078.html) <br>
-[SpringBoot 2.0 集成 Dubbo](https://blog.csdn.net/myNameIssls/article/details/82669224)
-
-参考链接:  <br>
-[http://dubbo.apache.org/zh-cn/docs/user/best-practice.html](http://dubbo.apache.org/zh-cn/docs/user/best-practice.html) <br>
-
-
-
+[基于 SpringBoot 集成 RabbitMQ](https://blog.csdn.net/myNameIssls/article/details/100185729)
 
 
 
