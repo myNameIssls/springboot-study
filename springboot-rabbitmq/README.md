@@ -397,7 +397,8 @@ public void queueTestConsumer(RabbitObject rabbitObject, Channel channel, Messag
 
 博客地址： <br>
 [SpringBoot 企业级应用实战](https://blog.csdn.net/column/details/14078.html) <br>
-[基于 SpringBoot 集成 RabbitMQ](https://blog.csdn.net/myNameIssls/article/details/100185729)
+[基于 SpringBoot 集成 RabbitMQ](https://blog.csdn.net/myNameIssls/article/details/100185729) <br />
+[SpringBoot RabbitMQ ACK 机制](https://blog.csdn.net/myNameIssls/article/details/101163617)
 
 
 
