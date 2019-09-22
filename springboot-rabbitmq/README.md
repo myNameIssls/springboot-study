@@ -231,7 +231,7 @@ public class RabbitMQConsumer {
 ## SpringBoot RabbitMQ ACK 机制
 
 ### ACK 机制流程图
-[](../docs/images/RabbitMQ-Ack.jpg)
+<img src="https://github.com/myNameIssls/springboot-study/blob/master/docs/images/RabbitMQ-Ack.jpg"><br/>
 
 ### application.yml 配置
 
