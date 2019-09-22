@@ -13,9 +13,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-
-    //@Autowired public AmqpAdmin amqpAdmin;
-
     /**
      * 消息转化器
      * @return
@@ -32,7 +29,6 @@ public class RabbitMQConfig {
     @Bean
     public DirectExchange exchangeTest(){
         DirectExchange directExchange = new DirectExchange(Constant.EXCHANGE_NAME_TEST);
-//        amqpAdmin.declareExchange(directExchange);
         return directExchange;
     }
 
@@ -43,7 +39,6 @@ public class RabbitMQConfig {
     @Bean
     public Queue queueTest(){
         Queue queueTest = new Queue(Constant.QUEUE_NAME_TEST);
-//        amqpAdmin.declareQueue(queueTest);
         return queueTest;
     }
 
@@ -53,7 +48,6 @@ public class RabbitMQConfig {
     @Bean
     public Binding bindingExchangeTest2QueueTest(){
         Binding binding = BindingBuilder.bind(this.queueTest()).to(this.exchangeTest()).with(Constant.QUEUE_NAME_TEST);
-//        amqpAdmin.declareBinding(binding);
         return binding;
     }
 }
