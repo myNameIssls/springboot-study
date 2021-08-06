@@ -32,7 +32,7 @@ public class RabbitMQApplication implements CommandLineRunner {
 
         RabbitObject rabbitObject = new RabbitObject();
         rabbitObject.setId(UUID.randomUUID().toString());
-        rabbitObject.setMessge("消息:" + UUID.randomUUID().toString());
+        rabbitObject.setMessge("消息内容:" + UUID.randomUUID().toString());
         rabbitTemplate.convertAndSend(Constant.EXCHANGE_NAME_TEST, Constant.QUEUE_NAME_TEST, rabbitObject);
 
         logger.info("------- 发送消息成功 ----------");

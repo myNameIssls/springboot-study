@@ -79,10 +79,16 @@ public class RabbitMQConsumer {
         }
     }
 
-//    @RabbitListener(queues = {Constant.QUEUE_NAME_TEST})
-//    public void queueTestConsumer(Message message){
-//        logger.info("-------- 消息-id:{}", message.getBody());
-//    }
+    @RabbitListener(queues = {Constant.QUEUE_NAME_TEST})
+    public void queueTestConsumer(Message message){
+        byte[] body = message.getBody();
+
+        logger.info("-------- 消息-id:{}", message.getBody());
+
+        String s = new String(body);
+
+        logger.info("消息内容：{}", s);
+    }
 
 
 }
