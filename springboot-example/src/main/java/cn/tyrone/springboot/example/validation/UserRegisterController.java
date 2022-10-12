@@ -7,6 +7,7 @@ import cn.tyrone.springboot.example.validation.entity.UserRegisterCommand;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,6 +50,20 @@ public class UserRegisterController {
             String message = bindingResult.getFieldErrors().stream().map(FieldError::getDefaultMessage).collect(Collectors.joining(","));
             response.error(message);
         }
+        return response;
+    }
+
+    @RequestMapping("/form/validated")
+    public Response form(@Validated AddAndEditCommand command){
+        Response response = Response.builder().build();
+        response.success();
+        return response;
+    }
+
+    @RequestMapping("/json/validated")
+    public Response json(@Validated @RequestBody AddAndEditCommand command){
+        Response response = Response.builder().build();
+        response.success();
         return response;
     }
 

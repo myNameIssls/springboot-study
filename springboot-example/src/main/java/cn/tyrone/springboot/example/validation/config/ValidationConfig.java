@@ -18,7 +18,7 @@ public class ValidationConfig {
     @Bean
     public Validator validator() {
         ValidatorFactory validatorFactory = Validation.byProvider(HibernateValidator.class)
-                .configure().failFast(true).buildValidatorFactory();
+                .configure().failFast(false).buildValidatorFactory();
         Validator validator = validatorFactory.getValidator();
         return validator;
     }
