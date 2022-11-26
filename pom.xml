@@ -96,5 +96,6 @@
         <module>springboot-rabbitmq</module>
         <module>springboot-mybatis-plus</module>
         <module>springboot-freemarker</module>
+        <module>springboot-springdatajpa</module>
     </modules>
 </project>
