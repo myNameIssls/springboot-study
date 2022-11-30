@@ -13,6 +13,7 @@ public enum Gender {
 
     MAN("MAN", "男性"),
     WOMEN("WOMEN", "女性"),
+    OTHER("other", "其它"),
     ;
     private String gender;
 

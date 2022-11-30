@@ -3,6 +3,7 @@ package cn.tyrone.springboot.springdatajpa.service;
 import cn.tyrone.springboot.springdatajpa.SpringDataJpaApplication;
 import cn.tyrone.springboot.springdatajpa.entity.Gender;
 import cn.tyrone.springboot.springdatajpa.entity.UserEntity;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ class UserServiceTest {
     @Test
     void saveUser() {
         UserEntity userEntity = UserEntity.builder()
-                .userCode("000001")
+                .userCode(RandomStringUtils.random(5))
                 .name("Jack Ma")
                 .password("123456")
                 .gender(Gender.MAN)
